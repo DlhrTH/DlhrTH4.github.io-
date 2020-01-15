@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+body{
+    font-family: 'nunito';
+    margin: 0px !important;
+}
+
+header{
+    background-image: url(img/superior.jpg);
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+header nav{
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: none;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+header label:hover{
+    cursor: pointer;
+    background:rgb(0, 0, 0);
+
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu li:hover{
+    background:rgba(187, 0, 0, 0.363);
+}
+
+.menu li a{
+    display: block;
+    padding: 20px;
+    color:rgb(207, 16, 16);
+    text-decoration: none;
+}
+
+section{
+    text-align: center;
+    background-color: white;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: 3em;
+    position: relative;
+    z-index: 2;
+    top: -110px;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    border-radius: 0.6em;
+}
+
+article.uno div{
+    padding: 0.2em;
+}
+
+article.uno div img{
+    max-width: 200px;
+    max-height: 180px;
+}
+
+article.uno div.duno{
+    grid-area: div1;
+}
+
+article.uno div.ddos{
+    grid-area: div2;
+}
+
+article.uno div.dtres{
+    grid-area: div3;
+}
+
+article.uno div.dcuatro{
+    grid-area: div4;
+}    
+
+section ul{
+    list-style: none;
+    display: block;
+}
+
+section ul li{
+    display: inline-block;
+    padding: 0.5em;
+}
+
+section ul li img{
+    max-width: 60px;
+    margin-right: 3em;
+}
+
+footer{
+    background-image: url(img/inferior.jpg);
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.bottom{
+    background-color: black;
+    text-align: center;
+    color: white;
+    min-height: 60px;
+}
+
+div.bottom p{
+    margin-top: 0 !important;
+    padding-top: 1.2em;
+}
+
+fieldset{
+    background-color: gray;
+    text-align: start;
+}
+
+aside{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 3em;
+}
+
+textarea{
+    min-width: 93%;
+    min-height: 100px !important;
+    margin-left: 2%;
+    margin-top: 1em;
+}
+
+input{
+    margin-right: 1em;
+}
+
+form label{
+    margin: 1em;
+}
+
+article.pos{
+    padding-top: 2em;
+}
+
+.inp{
+    float: left;
+    margin-bottom: 0.2em !important;
+    margin-top: 0.8em;
+    margin-right: 38%;
+}
+
+.inp2{
+    margin-bottom: 0.2em !important;
+    margin-top: 0.8em;
+}
+
+@media (min-width: 1200px){
+    article.uno{
+        display: grid;
+        grid-template-areas: "div1 div2 div3 div4";
+        margin-top: 4em;
+    }
+
+    .menu li:hover{
+        background:rgba(0, 0, 0, 0.651);
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 1200px){
+    article.uno{
+        display: grid;
+        grid-template-areas: "div1 div2" "div3 div4";
+        margin-top: 4em;
+    }
+
+    .menu li:hover{
+        background:rgba(0, 0, 0, 0.651);
+    }
+}
+
+@media (max-width: 800px){
+    article.uno{
+        display: grid;
+        grid-template-areas: "div1" "div2" "div3" "div4";
+        margin-top: 4em;
+    }
+
+    header label{
+        display: block;
+        padding-right: 50px;
+        color:rgb(202, 20, 20);
+        font-size: 1.5em;
+        background-color: rgb(0, 0, 0);
+    }
+
+    header {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .menu{
+        position: absolute;
+        width: 40%;
+        margin-left: -70%;
+        z-index: 3;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+
+    nav ul{
+        background-color: rgba(0, 0, 0, 0.836);
+    }
+}
